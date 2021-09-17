@@ -123,3 +123,59 @@ if balance < withdraw:
 # 残高が足りない場合を考慮する
 if balance < withdraw:
     pass
+
+# 命名規則
+# 変数名や関数 スネークケース
+# クラス名 キャメルケース
+# モジュールやパッケージ名 なるべく短いlower caseで、必要であればsnake_case
+
+# アンダースコア
+# _XXX: internal use only(non public)の意味
+# XXX_: Pythonですでに使われている単語を使いたいとき
+# __XXX: クラスの属性として使うことで名前修飾される
+# __XXX__: magic methodと呼ばれるもので、Pythonが特別に設定しているもの。開発者が定義することはないう
+#　　　　　　(overrideすることはある)
+# _:最近実行した戻り値や、iteration時に使わない変数
+for _ in range(10):
+    print("hello")
+
+# l, I , 0 一文字の変数は見間違えるので使わない
+
+# Constantsは大文字のsnakecaseを使う
+
+# Return
+def foo(x):
+    if x >= 0:
+        return math.sqrt(x)
+    else:
+        # returnを書くならNoneまで書く
+        return None
+
+# オブジェクトタイプの確認はisinstance()を使う
+# correct
+if isinstance(obj, int)
+
+# wrong
+if type(obj) is type(1)
+
+# Booleanに比較演算子を使わない
+bool_var = True
+
+# correct
+if vool_var:
+# wrong
+if bool_var == True
+
+# type hint
+def greeting(name: str) -> str:
+    return "Hello" + name
+# 一つでもhintをつけたらすべてにつける
+# Pythonがtypeのチェックをしてくれるわけではない
+# Pythonは動的型付け言語であることを意識
+# type hintを強制したり、命名規約に入れるべきではない
+
+
+
+
+
+
