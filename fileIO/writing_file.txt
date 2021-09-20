@@ -1,0 +1,2 @@
+You can write and read with w+ mode!!
+You can add sentences to the last of the file content with a+ mode
